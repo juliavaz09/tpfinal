@@ -1,0 +1,307 @@
+:root {
+    --colorTurq: #0a9cb2;
+    --colorMorado: #8347a2;
+    --colorGris: #eaeaea;
+}
+
+/*arriba*/
+body {
+    background-color: var(--colorGris);
+    font-family: "Nunito", sans-serif;
+    font-weight: 500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor-max {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header {
+    background-color: #8347a2;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    flex-direction: column;
+}
+
+@media (min-width: 480px) {
+    nav {
+        flex-direction: row;
+    }
+}
+
+nav img {
+    width: 150px;
+}
+
+li a {
+    font-size: 16px;
+    color: var(--colorGris);
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+/*contenido*/
+.bienvenidos {
+    justify-content: center;
+    font-size: 24px;
+    position: relative;
+
+    h1 {
+        color: var(--colorMorado);
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 15%;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    @media (min-width: 480px) {
+        h1 {
+            font-size: 34px;
+            font-weight: 900;
+        }
+    }
+}
+
+.formulario {
+    padding: 15px;
+}
+
+.mascotas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    color: var(--colorMorado);
+
+    h1 {
+        font-size: 25px;
+        font-weight: 900;
+    }
+
+    img {
+        position: absolute;
+        width: 30px;
+        top: 40px;
+    }
+
+    @media (min-width: 480px) {
+        h1 {
+            font-size: 30px;
+            font-weight: 900;
+        }
+
+        img {
+            top: 45px;
+            width: 40px;
+        }
+    }
+
+    button {
+        color: var(--colorTurq);
+        border: 1.5px solid var(--colorTurq);
+        padding: 15px 25px;
+        border-radius: 50px;
+        background-color: transparent;
+    }
+}
+
+/* formulario*/
+form {
+    text-align: start;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px #dddddd;
+    padding: 15px;
+    margin-top: 10px;
+
+    .inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .caracteristicas {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+input {
+    border: none;
+    background-color: var(--colorGris);
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+select {
+    border: none;
+    border-radius: 15px;
+    background-color: var(--colorGris);
+    padding: 7px;
+}
+
+h4 {
+    font-weight: 300;
+    color: var(--colorMorado);
+}
+
+/*    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+*/
+
+.animales {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.guardar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+
+    button {
+        border-radius: 50px;
+        padding: 10px 15px;
+        border: none;
+        background-color: #0a9cb2;
+        color: #fff;
+    }
+}
+
+@media (min-width: 768px) {
+    form {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+
+        select {
+            border: none;
+            border-radius: 15px;
+            background-color: var(--colorGris);
+            display: block;
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            padding-left: 15px;
+        }
+
+        .input {
+            margin-top: 18px;
+            padding: 10px;
+            justify-content: start;
+            margin: 10;
+
+            input {
+                background-color: #fff;
+                border: 2px solid var(--colorGris);
+                grid-column: 2/3;
+                grid-row: 3/4;
+            }
+
+
+        }
+
+        .guardar {
+            grid-column: 3/4;
+            justify-content: end;
+            flex-direction: row;
+        }
+
+        .asterisco {
+            margin-top: 15px;
+        }
+    }
+
+    .mascota {
+        grid-column: 1/2;
+        grid-row: 1/2;
+
+        .animales {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+    }
+}
+
+/*footer*/
+footer {
+    height: 500px;
+    margin-top: 200px;
+    background-image: url("../imagenes/footer-bg.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+
+    .footer {
+        text-align: center;
+        padding: 20px;
+
+        h2 {
+            color: #fff;
+            margin-top: 80px;
+        }
+
+        .lorem {
+            color: #fff;
+            width: 350px;
+            margin: 0 auto;
+        }
+    }
+
+    .contacto {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+
+        img {
+            width: 60px;
+            margin-top: 30px;
+        }
+
+        .redes {
+            margin-bottom: 70px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        p {
+            color: #fff;
+            margin-top: 35px;
+        }
+    }
+    hr{
+        margin-top: 70px;
+        max-width: 1200px;
+        margin: auto;
+    }
+}
+p{
+    color: #fff;
+    text-align: center;
+    margin-top: 3px;
+}
